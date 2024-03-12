@@ -60,7 +60,11 @@ public class Main {
     }
 
     private static void printInQuotes(String string) {
-        System.out.println("\""+string+"\"");
+         if (string.length() > 40) {
+            System.out.println("\""+string.substring(0, 40)+"...\"");
+        }
+        else {
+            System.out.println("\""+string+"\"");
     }
 
 }
