@@ -27,6 +27,12 @@ public class Main {
             if (parts[1].contains("\"")) {
                 throw new Exception("Строчку можно делить или умножать только на число");
             }
+              if (Integer.parseInt(parts[1]) > 10 || Integer.parseInt(parts[1]) < 1 ) {
+                throw new Exception("На вход принимаются только цифры от 1 до 10");
+            }
+        }
+        if (parts[0].length() > 10) {
+            throw new Exception("Калькулятор должен принимать строки длиной не более 10 символов");
         }
 
         for (int i = 0; i < parts.length; i++) {
