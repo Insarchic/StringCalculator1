@@ -31,16 +31,17 @@ public class Main {
                 throw new Exception("На вход принимаются только цифры от 1 до 10");
             }
         }
-        if (parts[0].length() > 10) {
-            throw new Exception("Калькулятор должен принимать строки длиной не более 10 символов");
-        }
-
+        
         for (int i = 0; i < parts.length; i++) {
             parts[i] = parts[i].replace("\"", "");
         }
-
+        
+        if (parts[0].length() > 10) {
+            throw new Exception("Калькулятор должен принимать строки длиной не более 10 символов");
+        }
+        
         if (action == '+') {
-            System.out.println(parts[0] + parts[1]);
+            System.out.println("\"" + parts[0] + parts[1] + "\"");
         } else if (action == '-') {
             int index = parts[0].indexOf(parts[1]);
             if (index == -1) {
